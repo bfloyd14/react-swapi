@@ -22,10 +22,10 @@ const Starships = () => {
 if(!starshipsList.length) return <h1> Please wait...ships are refueling</h1>
 
   return (  
-    <div className='startship-container'>
-      {starshipsList.map(starship =>
-        <div className="starship-list" key={starship.name}>
-        <Link to={`/starships/${starship._id}`}> {starship.name}</Link>
+    <div className='starship-container'>
+      {starshipsList.map((starship, idx) =>
+        <div className="starship-list-container" key={idx} >
+          <Link to={`/starships/${idx}`}> {starship.name}</Link>
         </div>
       )}
     </div>
