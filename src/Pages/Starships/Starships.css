@@ -1,3 +1,32 @@
-.startship-container {
-  
+.starship-container {
+  min-height: calc(100vh - 75px);
+  background-image: url(../../assets/images/lightspeed.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  text-align: center;
+}
+
+.starship-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  flex-wrap: wrap;
+  width: 170px;
+  height: 100px;
+  border-radius: 4px;
+  background-color:grey;
+  font-size: 22px;
+  padding: 10px ;
 }
