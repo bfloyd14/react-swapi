@@ -3,6 +3,9 @@ import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 
+//css
+import './StarshipDetails.css'
+
 //services
 import { getStarshipDetails } from "../../services/sw-api"
 
@@ -27,12 +30,20 @@ if (!starshipDetails.name) return <h1>Rebooting weapons systems....</h1>
 
   return ( 
     <div className="starship-container">
-      <div className="starship-details-container">
-      <h1>Model: {starshipDetails.model}</h1>
-      <h1>Name: {starshipDetails.name}</h1>
-      <Link to='/'>Back To The Ship Hanger</Link>
+      <div className="details-container">
+        <div className="details-card">
+          <div className='model'>Model: &nbsp;
+          {starshipDetails.model} </div> 
+          <div className="name">Name: &nbsp;
+          {starshipDetails.name}
+          </div>
+        </div>
       </div>
-      
+      <div className="link-back-container">
+        <div className="link-back">
+          <Link to='/'>Back To The Ship Hanger</Link>
+          </div>
+        </div>
     </div>
   )
 }
