@@ -29,12 +29,19 @@ body {
 
 a {
   text-decoration: none;
-  color: darkblue;
+  color: gold;
 }
 
 a:hover {
-  border-bottom: 2px solid royalblue;
-  color: royalblue;
+  border-bottom: 2px solid white;
+  color: white;
 }
 
-
+.starship-container {
+  min-height: calc(100vh - 75px);
+  background-image: url(../src/assets/images/lightspeed.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}

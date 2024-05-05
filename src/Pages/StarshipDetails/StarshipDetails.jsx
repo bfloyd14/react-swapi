@@ -26,10 +26,12 @@ const StarshipDetails = () => {
 if (!starshipDetails.name) return <h1>Rebooting weapons systems....</h1>
 
   return ( 
-    <div>
+    <div className="starship-container">
+      <div className="starship-details-container">
       <h1>Model: {starshipDetails.model}</h1>
       <h1>Name: {starshipDetails.name}</h1>
       <Link to='/'>Back To The Ship Hanger</Link>
+      </div>
       
     </div>
   )
