@@ -7,7 +7,8 @@ import { Link } from "react-router-dom"
 import './StarshipDetails.css'
 
 //services
-import { getStarshipDetails } from "../../services/sw-api"
+import { getStarshipDetails } from "../../services/sw-api.js"
+
 
 const StarshipDetails = () => {
 
@@ -20,10 +21,9 @@ const StarshipDetails = () => {
       const starshipData = await getStarshipDetails(starshipId)
       // set state
       setStarshipDetails(starshipData)
-      console.log(starshipDetails)
+      console.log(starshipData)
     }
     fetchDetails()
-    console.log('component has loaded')
   }, [starshipId])
 
 if (!starshipDetails.name) return <h1>Rebooting weapons systems....</h1>
@@ -32,10 +32,20 @@ if (!starshipDetails.name) return <h1>Rebooting weapons systems....</h1>
     <div className="starship-container">
       <div className="details-container">
         <div className="details-card">
-          <div className='model'>Model: &nbsp;
-          {starshipDetails.model} </div> 
-          <div className="name">Name: &nbsp;
-          {starshipDetails.name}
+          <div className='details'>
+            <div className="name">Model: &nbsp;&nbsp;
+            {starshipDetails.model} <br /></div>
+            <div className="name">Name:&nbsp;&nbsp;
+            {starshipDetails.name} <br /></div>
+            <div className='manufacturer'>Manufacturer: &nbsp;&nbsp;
+            {starshipDetails.manufacturer} <br /></div>
+          
+          <div className="passengers">
+            Passengers: &nbsp;&nbsp; {starshipDetails.passengers} <br /></div>
+            <div className="hyperdrive">
+              Hyperdrive rating: &nbsp;&nbsp; {starshipDetails.hyperdrive_rating}
+            </div>
+
           </div>
         </div>
       </div>

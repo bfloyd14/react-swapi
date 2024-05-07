@@ -23,8 +23,18 @@ align-items: center;
   color: gold;
   background-color: black;
   height: 500px;
-  gap: 40px;
-  font-size: 28px;
+  font-size: 20px;
+}
+
+.name, .model, .manufacturer, .passengers, .hyperdrive {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.model {
+  margin-top: 10px;
 }
 
 .link-back-container {
@@ -42,3 +52,4 @@ align-items: center;
   display: flex;
   justify-content: center;
 }
+

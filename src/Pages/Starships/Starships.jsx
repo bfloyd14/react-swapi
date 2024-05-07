@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import './Starships.css'
 
 //services
-import { getAllStarships } from "../../services/sw-api"
+import { getAllStarships } from "../../services/sw-api.js"
 
 const Starships = () => {
   const[starshipsList, setStarshipsList] = useState([])
